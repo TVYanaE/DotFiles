@@ -21,6 +21,10 @@ vim.keymap.set("n", "<Leader>fq", function()
     require("bufdelete").bufdelete(bufnr, true)
 end, { silent = true, noremap = true })
 
+vim.keymap.set("n", "<C-k>", function ()
+    vim.lsp.buf.hover()
+end, { silent = true, noremap = true})
+
 -- Define keymaps for visual mode
 
 
@@ -30,3 +34,7 @@ vim.keymap.set("i", "<C-h>", "<Left>", { silent = true, noremap = true })
 vim.keymap.set("i", "<C-j>", "<Down>", { silent = true, noremap = true })
 vim.keymap.set("i", "<C-k>", "<Up>", { silent = true, noremap = true })
 vim.keymap.set("i", "<C-l>", "<Right>", { silent = true, noremap = true })
+
+vim.keymap.set("i", "<C-s>", function ()
+    vim.lsp.buf.signature_help()
+end, { silent = true, noremap = true })
