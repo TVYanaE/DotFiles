@@ -1,0 +1,6 @@
+require("config.autocmds")
+require("config.globals")
+require("config.keymap")
+require("config.lazy")
+require("config.options")
+require("config.colors")
