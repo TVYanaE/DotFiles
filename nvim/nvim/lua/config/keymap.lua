@@ -21,9 +21,19 @@ vim.keymap.set("n", "<Leader>fq", function()
     require("bufdelete").bufdelete(bufnr, true)
 end, { silent = true, noremap = true })
 
+-- Keymap for hover 
 vim.keymap.set("n", "<C-k>", function ()
     vim.lsp.buf.hover()
 end, { silent = true, noremap = true})
+
+-- Keymap for go to definition
+vim.keymap.set("n", "gd", function ()
+    vim.lsp.buf.definition()
+end, { silent = true, noremap = true })
+
+-- Keymap for search
+vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
+
 
 -- Define keymaps for visual mode
 
