@@ -16,7 +16,6 @@ vim.opt.incsearch = true -- Show matches as you type
 -- Visual Settings
 vim.opt.termguicolors = true -- Enable 24-bit colors
 
-
 -- Tabulations / Indentation
 vim.opt.tabstop = 4 -- visual amount of space in /t cymbol
 vim.opt.grepprg = "rg --vimgrep"
@@ -32,12 +31,12 @@ vim.opt.signcolumn = "yes" -- Always show sign column
 --vim.opt.colorcolumn = "100" -- Show column at 100 characters
 vim.opt.showmatch = true -- Highlight matching brackets
 
-
+-- Settings for showing only warnings and error in editor
 vim.diagnostic.config({
     severity_sort = true,
     virtual_text = false,
     underline = {
-        severity = { min = vim.diagnostic.severity.WARN }, -- только WARN и ERROR
+        severity = { min = vim.diagnostic.severity.WARN }, -- only WARN и ERROR
     },
     signs = {
         severity = { min = vim.diagnostic.severity.WARN },
