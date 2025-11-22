@@ -4,6 +4,9 @@ vim.opt.number = true -- line numbers
 -- Settings for clipbloard 
 vim.opt.clipboard = "unnamedplus"
 
+-- Setting for cursor
+vim.opt.guicursor = "n-v-c:block,i:ver25"
+
 -- Tabulations / Indentation
 vim.opt.tabstop = 4 -- visual amount of space in /t cymbol
 vim.opt.grepprg = "rg --vimgrep"
