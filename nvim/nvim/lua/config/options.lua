@@ -1,5 +1,6 @@
 -- Basic Settings
 vim.opt.number = true -- line numbers 
+vim.opt.rnu = true -- relative line numbers 
 
 -- Settings for clipbloard 
 vim.opt.clipboard = "unnamedplus"

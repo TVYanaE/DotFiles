@@ -8,6 +8,7 @@ return {
       ensure_installed = {
         "lua", "vim", "vimdoc", "sql", "make", "markdown_inline", "xml",
         "rust", "javascript", "typescript", "html", "css", "bash", "json", "toml",
+        "wgsl",
       },
       sync_install = false,
       auto_install = true,
