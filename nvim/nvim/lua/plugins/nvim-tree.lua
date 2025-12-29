@@ -11,7 +11,7 @@ return {
             sorter = "case_sensitive",
         },
         view = {
-            -- width = 30,
+           
             adaptive_size = true,
         },
         renderer = {
@@ -21,6 +21,6 @@ return {
             dotfiles = false,
             git_ignored = false,
         },
-        })
+    })
     end,
 }

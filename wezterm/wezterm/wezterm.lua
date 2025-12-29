@@ -12,9 +12,14 @@ config.initial_cols = 120
 config.initial_rows = 28
 
 -- or, changing the font size and color scheme.
+config.font = wezterm.font_with_fallback {
+  "JetBrains Mono",
+  "Symbols Nerd Font Mono",
+}
 config.font_size = 13
 config.color_scheme = 'Dark Ocean (terminal.sexy)'
 
+config.text_background_opacity = 1.0
 
 -- Settings for background image 
 local dimmer = { 

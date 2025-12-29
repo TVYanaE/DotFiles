@@ -17,12 +17,20 @@ return {
             :with_pair(cond.not_filetypes({"rust"}))
             :with_pair(cond.not_after_regex("."))
         )
-
+        
         -- Add Rule for autopairing <> in all files except html file
         npairs.add_rule(
             Rule("<", ">")
             :with_pair(cond.not_filetypes({"html"}))
-            :with_pair(cond.not_after_regex("."))
+            :with_pair(function(opts)
+                local next = opts.next_char or ""
+                
+                if next:match("%s") or next == "" then 
+                    return true
+                end 
+
+                return false 
+            end)
         )
     end
 }

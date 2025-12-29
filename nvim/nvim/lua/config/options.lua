@@ -2,6 +2,7 @@
 vim.opt.number = true -- line numbers 
 vim.opt.rnu = true -- relative line numbers 
 
+vim.opt.termsync = false
 -- Settings for clipbloard 
 vim.opt.clipboard = "unnamedplus"
 
