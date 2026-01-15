@@ -23,13 +23,13 @@ config.text_background_opacity = 1.0
 
 -- Settings for background image 
 local dimmer = { 
-    brightness = 0.015,  
+    --brightness = 0.015,  
     --saturation = 0.5,
 }
 
 config.background = {
       {
-        source = { File = "/home/iana/.config/wezterm/background3.jpg" },
+        source = { File = "/home/iana/.config/wezterm/kurisu.png" },
         width = "Cover",
         height = "Cover",
         horizontal_align = "Center",  -- ок
