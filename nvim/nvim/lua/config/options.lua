@@ -11,6 +11,8 @@ vim.opt.guicursor = "n-v-c:block,i:ver25"
 
 -- Tabulations / Indentation
 vim.opt.tabstop = 4 -- visual amount of space in /t cymbol
+vim.opt.shiftwidth = 4
+vim.opt.expandtab = true
 vim.opt.grepprg = "rg --vimgrep"
 vim.opt.grepformat = "&f:%l:%c:%m"
 
