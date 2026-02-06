@@ -2,6 +2,8 @@
 vim.opt.number = true -- line numbers 
 vim.opt.rnu = true -- relative line numbers 
 
+vim.opt.statusline = "%t %m %= %l:%c"
+
 vim.opt.termsync = false
 -- Settings for clipbloard 
 vim.opt.clipboard = "unnamedplus"
