@@ -6,7 +6,6 @@ return {
             "vimls",
             "sqlls",
             "rust_analyzer",
-            "harper_ls",
             "html",
             "bashls",
             "cssls",
