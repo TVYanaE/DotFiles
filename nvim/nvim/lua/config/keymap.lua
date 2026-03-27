@@ -8,6 +8,8 @@ vim.keymap.set("v", ">", ">gv", { desc = "Tab to right with keeping selection" }
 -- Keymaps for NvimTree plugin
 vim.keymap.set("n", "<Leader>t", ":NvimTreeToggle<CR>", { silent = true, noremap = true })
 
+-- Keymap for rename in all project 
+vim.keymap.set("n", "<Leader>rn", vim.lsp.buf.rename)
 
 -- Keymaps for BufferLine plugin
 -- Switch to the next tab
