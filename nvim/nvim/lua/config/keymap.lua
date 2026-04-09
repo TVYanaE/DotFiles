@@ -1,5 +1,6 @@
 -- Define keymaps for normal mode
 vim.keymap.set("n", "<Leader>s", ":write<CR>", { silent = true, noremap = true }) -- for save with space + s
+vim.keymap.set("n", "<Leader>S", ":wa<CR>", { silent = true, noremap = true }) -- for save all changed buffers 
 
 -- Keymaps for keeping selection 
 vim.keymap.set("v", "<", "<gv", { desc = "Tab to left with keeping selection" })
