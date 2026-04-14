@@ -1,0 +1,8 @@
+{
+  "plugins": {
+    "arborist.nvim": {
+      "rev": "ffd4e836d38f16effe9971bda8b2c811055ed2ca",
+      "src": "https://github.com/arborist-ts/arborist.nvim"
+    }
+  }
+}

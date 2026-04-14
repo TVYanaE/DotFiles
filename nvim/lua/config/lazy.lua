@@ -25,3 +25,12 @@ require("lazy").setup({
     install = { colorscheme = { "habamax" } },
     checker = { enabled = true },
 })
+
+
+require('nvim-treesitter').install(
+    { 
+        "lua", "vim", "vimdoc", "sql", "make", "markdown_inline", "xml",
+        "rust", "javascript", "typescript", "html", "css", "bash", "json", "toml",
+        "wgsl"
+    }
+):wait(300000) -- wait max. 5 minutes

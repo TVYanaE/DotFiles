@@ -13,6 +13,7 @@ return {
             "jsonls",
             "taplo",
             "markdown_oxide",
+            "wgsl_analyzer",
         },
     },
     dependencies = {
