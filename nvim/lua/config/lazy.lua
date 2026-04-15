@@ -34,3 +34,10 @@ require('nvim-treesitter').install(
         "wgsl"
     }
 ):wait(300000) -- wait max. 5 minutes
+
+vim.api.nvim_create_autocmd("FileType", {
+  callback = function()
+    pcall(vim.treesitter.start)
+    vim.bo.syntax = "off"
+  end,
+})

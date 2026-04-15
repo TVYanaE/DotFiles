@@ -14,6 +14,18 @@ return {
         disable_nvimtree_bg = true,
         terminal_colors = true,
 
+        --[[ group_overrides = {
+        -- Tree-sitter
+        ["@keyword"] = { fg = "#569CD6" },
+
+        -- LSP semantic
+        ["@lsp.type.keyword"] = { fg = "#569CD6" },
+
+        -- иногда ещё нужно:
+        ["@keyword.function"] = { fg = "#569CD6" },
+        ["@keyword.return"] = { fg = "#569CD6" },
+    },
+ ]]
         --color_overrides = {
         --    vscLineNumber = "#FFFFFF",
         --},
