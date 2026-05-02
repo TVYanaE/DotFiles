@@ -5,6 +5,11 @@ vim.lsp.config('rust_analyzer', {
             check = {
                 command = "clippy"
             },
+
+            cargo = {
+                allFeatures = true,
+            },
+
             inlayHints = {
                 enable = true,
                 typeHints = true,

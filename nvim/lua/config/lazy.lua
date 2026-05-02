@@ -31,13 +31,51 @@ require('nvim-treesitter').install(
     { 
         "lua", "vim", "vimdoc", "sql", "make", "markdown_inline", "xml",
         "rust", "javascript", "typescript", "html", "css", "bash", "json", "toml",
-        "wgsl"
+        "wgsl",  
     }
 ):wait(300000) -- wait max. 5 minutes
 
+
+vim.g.riscv_asm_all_enable = true
+
+vim.g.riscv_asm_isa = 'RV64GC'
+
 vim.api.nvim_create_autocmd("FileType", {
+    callback = function()
+        pcall(vim.treesitter.start)
+        vim.bo.syntax = "on"
+    end,
+})
+
+-- 1. Регистрация расширений
+vim.filetype.add({
+  extension = {
+    s = 'riscv_asm',
+    S = 'riscv_asm',
+    riscv = 'riscv_asm',
+  },
+})
+
+-- 2. Фикс ошибок плагина и принудительный синтаксис
+vim.api.nvim_create_autocmd({ "BufReadPost", "BufWinEnter" }, {
+  pattern = { "*.s", "*.S", "*.riscv" },
   callback = function()
-    pcall(vim.treesitter.start)
-    vim.bo.syntax = "off"
+    -- Сначала определяем переменные, на которые ругается плагин
+    vim.b.riscv_asm_all_enable = 1
+    
+    vim.defer_fn(function()
+      if vim.api.nvim_buf_is_valid(0) then
+        -- Устанавливаем тип
+        vim.bo.filetype = "riscv_asm"
+        
+        -- Снимаем блокировки
+        vim.bo.readonly = false
+        vim.bo.modifiable = true
+        
+        -- Включаем синтаксис и выключаем мешающий treesitter
+        vim.cmd("syntax on")
+        pcall(vim.treesitter.stop)
+      end
+    end, 20)
   end,
 })

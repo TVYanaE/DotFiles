@@ -29,7 +29,7 @@ local dimmer = {
 
 config.background = {
       {
-        source = { File = "/home/iana/.config/wezterm/kurisu.png" },
+        source = { File = "/home/iana/.config/wezterm/background_lizard.png" },
         width = "Cover",
         height = "Cover",
         horizontal_align = "Center",  -- ок
