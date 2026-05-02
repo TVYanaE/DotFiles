@@ -14,6 +14,7 @@ return {
             "taplo",
             "markdown_oxide",
             "wgsl_analyzer",
+            "asm_lsp"
         },
     },
     dependencies = {
