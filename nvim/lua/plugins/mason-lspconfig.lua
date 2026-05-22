@@ -15,6 +15,7 @@ return {
             "markdown_oxide",
             "wgsl_analyzer",
             "asm_lsp",
+            "clangd"
         },
     },
     dependencies = {

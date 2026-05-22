@@ -31,7 +31,7 @@ require('nvim-treesitter').install(
     { 
         "lua", "vim", "vimdoc", "sql", "make", "markdown_inline", "xml",
         "rust", "javascript", "typescript", "html", "css", "bash", "json", "toml",
-        "wgsl",  
+        "wgsl", "c", "cpp" 
     }
 ):wait(300000) -- wait max. 5 minutes
 

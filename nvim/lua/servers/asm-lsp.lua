@@ -1,7 +1,7 @@
 vim.lsp.config('asm_lsp', {
     -- Настройки запуска
     cmd = { 'asm-lsp' },
-    filetypes = { 'asm', 's', 'S', 'vmasm', "riscv_asm" },
+    filetypes = { 'asm', 'vmasm', "riscv_asm" },
     
     -- Пример настроек (если нужны)
     settings = {
